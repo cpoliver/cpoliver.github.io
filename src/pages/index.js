@@ -9,10 +9,7 @@ const Outer = props => (
     {...props}
     sx={{
       alignItems: "center",
-      backgroundColor: "#303030",
       bottom: 0,
-      color: "#f2f2f2",
-      fontFamily: "Inter",
       justifyContent: "center",
       left: 0,
       lineHeight: "150%",
@@ -30,8 +27,9 @@ const Inner = props => (
     sx={{
       flex: 1,
       flexDirection: "column",
-      backgroundColor: "rgba(0,0,0,0.25)",
-      minHeight: 667,
+      // backgroundColor: "rgba(0,0,0,0.25)",
+      height: "100%",
+      // minHeight: 667,
       maxHeight: 1080,
       minWidth: 375,
       maxWidth: 1280,
@@ -41,54 +39,100 @@ const Inner = props => (
 )
 
 const Top = () => (
-  <Flex flexDirection="column">
-    <Text
+  <Flex
+    sx={{
+      backgroundColor: "rgba(255,255,255,0.2)",
+      flex: 1,
+      flexDirection: "column",
+      alignItems: "flex-start",
+      // height: "50%",
+      justifyContent: "center",
+    }}
+  >
+    <Flex
       sx={{
-        fontSize: 36,
-        lineHeight: "105%",
-        textTransform: "uppercase",
+        backgroundColor: "rgba(255,255,255,0.2)",
+        mx: 40,
+        my: 80,
+        flexDirection: "column",
       }}
     >
-      <strong>Charles</strong>&nbsp;P.
-      <br />
-      <strong>Oliver</strong>
-    </Text>
-    <Text
-      sx={{
-        color: "#ccc",
-        fontSize: 25,
-        fontWeight: "bold",
-      }}
-    >
-      Front-end Architect &amp;
-      <br />
-      Full-stack Developer
-    </Text>
-    <Text
-      sx={{
-        color: "#a2a2a2",
-        fontWeight: "bold",
-        textTransform: "uppercase",
-      }}
-    >
-      UK-based Remote Consulting
-    </Text>
+      <Text
+        sx={{
+          flex: 1,
+          fontSize: 36,
+          lineHeight: "105%",
+          textTransform: "uppercase",
+        }}
+      >
+        <strong>Charles</strong>&nbsp;P.
+        <br />
+        <strong>Oliver</strong>
+      </Text>
+      <Text
+        sx={{
+          flex: 1,
+          fontSize: 25,
+          fontWeight: "bold",
+          my: 24,
+          opacity: 0.8,
+        }}
+      >
+        Front-end Architect &amp;
+        <br />
+        Full-stack Developer
+      </Text>
+      <Text
+        sx={{
+          flex: 1,
+          fontWeight: "bold",
+          opacity: 0.6,
+          textTransform: "uppercase",
+        }}
+      >
+        UK-based Remote Consulting
+      </Text>
+    </Flex>
   </Flex>
 )
 
 const Bottom = () => (
-  <Flex>
-    <Flex flexDirection="column">
-      <p>Specialising In:</p>
-      <p>React • React Native</p>
-      <p>Node • TypeScript • GraphQL</p>
-      <p>Agile • TDD • UX</p>
+  <Flex
+    sx={{
+      backgroundColor: "rgba(0,0,0,0.2)",
+      color: "background",
+      flex: 1,
+      flexDirection: "column",
+    }}
+  >
+    <Flex
+      sx={{
+        alignItems: "center",
+        flex: 1,
+        flexDirection: "column",
+        textAlign: "center",
+      }}
+    >
+      <Text>Specialising In:</Text>
+      <Text>
+        React • React Native
+        <br />
+        Node • TypeScript • GraphQL
+        <br />
+        Agile • TDD • UX
+      </Text>
     </Flex>
-    <Flex>
-      <p>Download CV/Resumé</p>
-      <p>docx</p>
-      <p>pdf</p>
-      <p>md</p>
+    <Flex
+      sx={{
+        alignItems: "center",
+        justifyContent: "center",
+        flex: 1,
+      }}
+    >
+      <Text>Download CV/Resumé</Text>
+      <Text>docx</Text>
+      <Text>pdf</Text>
+      <Text>md</Text>
     </Flex>
   </Flex>
 )
@@ -97,7 +141,6 @@ const SocialIcon = props => (
   <Box
     {...props}
     sx={{
-      color: "white",
       m: 16,
       size: 48,
     }}
@@ -107,7 +150,7 @@ const SocialIcon = props => (
 const Floating = () => (
   <Flex
     sx={{
-      backgroundColor: "tomato",
+      backgroundColor: "muted",
       borderRadius: "1000px",
       position: "absolute",
       zIndex: 999,
@@ -128,7 +171,7 @@ const Floating = () => (
 const Background = () => (
   <Box
     sx={{
-      backgroundColor: "white",
+      backgroundColor: "text",
       bottom: 0,
       height: "calc(50% + 4vw)",
       left: 0,
