@@ -27,9 +27,7 @@ const Inner = props => (
     sx={{
       flex: 1,
       flexDirection: "column",
-      // backgroundColor: "rgba(0,0,0,0.25)",
       height: "100%",
-      // minHeight: 667,
       maxHeight: 1080,
       minWidth: 375,
       maxWidth: 1280,
@@ -41,17 +39,14 @@ const Inner = props => (
 const Top = () => (
   <Flex
     sx={{
-      backgroundColor: "rgba(255,255,255,0.2)",
+      alignItems: "flex-start",
       flex: 1,
       flexDirection: "column",
-      alignItems: "flex-start",
-      // height: "50%",
       justifyContent: "center",
     }}
   >
     <Flex
       sx={{
-        backgroundColor: "rgba(255,255,255,0.2)",
         mx: 40,
         my: 80,
         flexDirection: "column",
@@ -99,7 +94,6 @@ const Top = () => (
 const Bottom = () => (
   <Flex
     sx={{
-      backgroundColor: "rgba(0,0,0,0.2)",
       color: "background",
       flex: 1,
       flexDirection: "column",
@@ -107,32 +101,70 @@ const Bottom = () => (
   >
     <Flex
       sx={{
-        alignItems: "center",
+        color: "background",
         flex: 1,
         flexDirection: "column",
-        textAlign: "center",
+        my: 80,
       }}
     >
-      <Text>Specialising In:</Text>
-      <Text>
-        React • React Native
-        <br />
-        Node • TypeScript • GraphQL
-        <br />
-        Agile • TDD • UX
-      </Text>
-    </Flex>
-    <Flex
-      sx={{
-        alignItems: "center",
-        justifyContent: "center",
-        flex: 1,
-      }}
-    >
-      <Text>Download CV/Resumé</Text>
-      <Text>docx</Text>
-      <Text>pdf</Text>
-      <Text>md</Text>
+      <Flex
+        sx={{
+          alignItems: "center",
+          flex: 1,
+          flexDirection: "column",
+          textAlign: "center",
+        }}
+      >
+        <Text
+          sx={{
+            borderColor: "#aaa",
+            borderStyle: "solid",
+            borderWidth: 0,
+            borderBottomWidth: 1,
+            fontWeight: "bold",
+            mb: 2,
+            pb: 1,
+            px: 2,
+            textTransform: "uppercase",
+          }}
+        >
+          Specialising In:
+        </Text>
+        <Text>
+          React • React Native
+          <br />
+          Node • TypeScript • GraphQL
+          <br />
+          Agile • TDD • UX
+        </Text>
+      </Flex>
+      <Flex
+        sx={{
+          alignItems: "flex-end",
+          background: "tomato",
+          fontWeight: "bold",
+          mx: 160,
+          textAlign: "center",
+          textTransform: "uppercase",
+        }}
+      >
+        <Box flex={2}>
+          <Text>
+            Download
+            <br />
+            CV/Resumé
+          </Text>
+        </Box>
+        <Box flex={1}>
+          <Text>docx</Text>
+        </Box>
+        <Box flex={1}>
+          <Text>pdf</Text>
+        </Box>
+        <Box flex={1}>
+          <Text>md</Text>
+        </Box>
+      </Flex>
     </Flex>
   </Flex>
 )
@@ -142,7 +174,7 @@ const SocialIcon = props => (
     {...props}
     sx={{
       m: 16,
-      size: 48,
+      size: 36,
     }}
   />
 )
