@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Charles P. Oliver | Remote Front-End Architect & Full-Stack Developer`,
+    description: `Personal website of Charles P. Oliver, UK-Based Remote Front-End Architect & Full-Stack Developer`,
+    author: `@cpoliver`,
   },
   plugins: [
     `gatsby-plugin-theme-ui`,
