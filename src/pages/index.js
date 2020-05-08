@@ -110,8 +110,10 @@ const Bottom = () => (
       <Flex
         sx={{
           alignItems: "center",
+          justifyContent: "center",
           flex: 1,
           flexDirection: "column",
+          fontSize: 18,
           textAlign: "center",
         }}
       >
@@ -138,33 +140,27 @@ const Bottom = () => (
           Agile • TDD • UX
         </Text>
       </Flex>
-      <Flex
+      <Box
         sx={{
-          alignItems: "flex-end",
-          background: "tomato",
+          alignSelf: "center",
           fontWeight: "bold",
-          mx: 160,
           textAlign: "center",
           textTransform: "uppercase",
         }}
       >
-        <Box flex={2}>
-          <Text>
-            Download
-            <br />
-            CV/Resumé
-          </Text>
-        </Box>
-        <Box flex={1}>
-          <Text>docx</Text>
-        </Box>
-        <Box flex={1}>
-          <Text>pdf</Text>
-        </Box>
-        <Box flex={1}>
-          <Text>md</Text>
-        </Box>
-      </Flex>
+        <Text
+          sx={{
+            borderWidth: 2,
+            borderColor: "background",
+            borderRadius: 4,
+            borderStyle: "solid",
+            p: 3,
+            px: 4,
+          }}
+        >
+          View CV/Resumé
+        </Text>
+      </Box>
     </Flex>
   </Flex>
 )
