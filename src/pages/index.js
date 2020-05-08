@@ -2,6 +2,7 @@ import React from "react"
 import { Box, Flex, Link, Text } from "rebass"
 
 import { Dribbble, Github, Linkedin } from "../components/socialIcon"
+import { Layout } from "../components/layout"
 import SEO from "../components/seo"
 
 const Outer = props => (
@@ -176,7 +177,7 @@ const SocialIcon = ({ href, ...props }) => (
         size: 36,
         backgroundColor: "background",
         borderRadius: "50%",
-        boxShadow: "md",
+        boxShadow: "sm",
         cursor: "pointer",
         "&:hover": {
           backgroundColor: "transparent",
@@ -191,6 +192,7 @@ const Floating = () => (
     sx={{
       backgroundColor: "muted",
       borderRadius: "1000px",
+      boxShadow: "md",
       position: "absolute",
       zIndex: 99,
     }}
@@ -225,14 +227,16 @@ const Background = () => (
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <Outer>
-      <Floating />
-      <Inner>
-        <Top />
-        <Bottom />
-      </Inner>
-      <Background />
-    </Outer>
+    <Layout>
+      <Outer>
+        <Floating />
+        <Inner>
+          <Top />
+          <Bottom />
+        </Inner>
+        <Background />
+      </Outer>
+    </Layout>
   </>
 )
 
