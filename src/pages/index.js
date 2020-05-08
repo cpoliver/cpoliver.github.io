@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Flex, Text } from "rebass"
+import { Box, Flex, Link, Text } from "rebass"
 
 import { Dribbble, Github, Linkedin } from "../components/socialIcon"
 import SEO from "../components/seo"
@@ -29,8 +29,9 @@ const Inner = props => (
       flexDirection: "column",
       height: "100%",
       maxHeight: 1080,
-      minWidth: 375,
       maxWidth: 1280,
+      minHeight: 320,
+      minWidth: 375,
       zIndex: 1,
     }}
   />
@@ -47,8 +48,8 @@ const Top = () => (
   >
     <Flex
       sx={{
-        mx: 40,
-        my: 80,
+        mx: 6,
+        my: [3, 9],
         flexDirection: "column",
       }}
     >
@@ -69,23 +70,23 @@ const Top = () => (
           flex: 1,
           fontSize: 25,
           fontWeight: "bold",
-          my: 24,
+          lineHeight: "120%",
+          my: [3, 4],
           opacity: 0.8,
         }}
       >
-        Front-end Architect &amp;
+        Front-End Architect &amp;
         <br />
-        Full-stack Developer
+        Full-Stack Developer
       </Text>
       <Text
         sx={{
           flex: 1,
-          fontWeight: "bold",
           opacity: 0.6,
           textTransform: "uppercase",
         }}
       >
-        UK-based Remote Consulting
+        UK-Based Remote Consulting
       </Text>
     </Flex>
   </Flex>
@@ -104,7 +105,7 @@ const Bottom = () => (
         color: "background",
         flex: 1,
         flexDirection: "column",
-        my: 80,
+        my: [3, 9],
       }}
     >
       <Flex
@@ -143,6 +144,7 @@ const Bottom = () => (
       <Box
         sx={{
           alignSelf: "center",
+          display: "none", // TODO: re-enable
           fontWeight: "bold",
           textAlign: "center",
           textTransform: "uppercase",
@@ -165,14 +167,23 @@ const Bottom = () => (
   </Flex>
 )
 
-const SocialIcon = props => (
-  <Box
-    {...props}
-    sx={{
-      m: 16,
-      size: 36,
-    }}
-  />
+const SocialIcon = ({ href, ...props }) => (
+  <Link href={href} target="_blank">
+    <Box
+      {...props}
+      sx={{
+        m: 3,
+        size: 36,
+        backgroundColor: "background",
+        borderRadius: "50%",
+        boxShadow: "md",
+        cursor: "pointer",
+        "&:hover": {
+          backgroundColor: "transparent",
+        },
+      }}
+    />
+  </Link>
 )
 
 const Floating = () => (
@@ -181,16 +192,16 @@ const Floating = () => (
       backgroundColor: "muted",
       borderRadius: "1000px",
       position: "absolute",
-      zIndex: 999,
+      zIndex: 99,
     }}
   >
-    <SocialIcon>
+    <SocialIcon href="https://linkedin.com/in/cpoliver">
       <Linkedin />
     </SocialIcon>
-    <SocialIcon>
+    <SocialIcon href="https://github.com/cpoliver">
       <Github />
     </SocialIcon>
-    <SocialIcon>
+    <SocialIcon href="https://dribbble.com/cpoliver">
       <Dribbble />
     </SocialIcon>
   </Flex>
