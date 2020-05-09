@@ -4,6 +4,7 @@ module.exports = {
     description: `Personal website of Charles P. Oliver, UK-Based Remote Front-End Architect & Full-Stack Developer`,
     author: `@cpoliver`,
   },
+  pathPrefix: "/cpoliver.github.io",
   plugins: [
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-react-helmet`,
