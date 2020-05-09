@@ -27,13 +27,13 @@
     "prettier": "2.0.5"
   },
   "keywords": [
-    "gatsby",
-    "cpoliver"
+    "cpoliver",
+    "gatsby"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
@@ -43,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/cpoliver/cpoliver.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/cpoliver/cpoliver.github.io/issues"
   }
 }
