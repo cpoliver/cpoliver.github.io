@@ -9,10 +9,9 @@ const Experience = ({ years, skills, sx = {} }) => (
     mt={6}
     px={4}
     sx={{
-      borderColor: "muted",
-      borderStyle: "solid",
-      borderWidth: "0",
       alignItems: "center",
+      border: "line",
+      borderWidth: 0,
       ...sx,
     }}
   >
@@ -63,9 +62,7 @@ export const Profile = () => (
       <Experience
         years="5+"
         skills={["React", "NodeJS"]}
-        sx={{
-          borderWidth: "0 1px",
-        }}
+        sx={{ borderWidth: "0 1px" }}
       />
       <Experience years="3+" skills={["React Native", "Remote Working"]} />
     </Flex>

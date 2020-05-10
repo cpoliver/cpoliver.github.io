@@ -40,7 +40,8 @@
         "Upskilling graduate developers, and developers with non-React backgrounds",
         "Organising 25+ developers based in the Bangalore office working on several concurrent projects"
       ],
-      "teamSize": "> 25",
+      "teamSize": ">25",
+      "location": "on-site & remote",
       "projectType": ["greenfield", "migration"],
       "technology": ["graphql", "react"]
     }

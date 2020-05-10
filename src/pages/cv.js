@@ -22,8 +22,9 @@ const IndexPage = () => (
           sx={{
             backgroundColor: "text",
             color: "background",
+            flex: 1,
             flexDirection: "column",
-            minWidth: 960,
+            maxWidth: 1600,
           }}
         >
           <Header />

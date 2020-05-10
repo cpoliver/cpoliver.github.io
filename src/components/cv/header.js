@@ -18,7 +18,7 @@ export const Header = () => (
         fontWeight: "bold",
         opacity: 0.8,
         pb: 1,
-        pt: 6,
+        pt: 7,
       }}
     >
       {cv.name.first}&nbsp;
@@ -32,15 +32,14 @@ export const Header = () => (
       sx={{
         alignSelf: "stretch",
         flex: 1,
-        mt: 4,
+        mt: 6,
         opacity: 0.8,
       }}
     >
       <Text
         sx={{
-          borderWidth: "1px 0",
-          borderStyle: "solid",
-          borderColor: "muted",
+          border: "line",
+          borderLeftWidth: 0,
           flex: 1,
           py: 2,
           px: 3,
@@ -51,10 +50,8 @@ export const Header = () => (
       </Text>
       <Text
         sx={{
-          borderWidth: 1,
-          borderRightWidth: 0,
-          borderStyle: "solid",
-          borderColor: "muted",
+          border: "line",
+          borderWidth: "1px 0",
           flex: 1,
           py: 2,
           px: 3,

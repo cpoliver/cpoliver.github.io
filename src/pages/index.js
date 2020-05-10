@@ -121,10 +121,7 @@ const Bottom = () => (
       >
         <Text
           sx={{
-            borderColor: "#aaa",
-            borderStyle: "solid",
-            borderWidth: 0,
-            borderBottomWidth: 1,
+            border: "line-b",
             fontWeight: "bold",
             mb: 2,
             pb: 1,

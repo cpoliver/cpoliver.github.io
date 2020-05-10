@@ -3,7 +3,7 @@ export const colors = {
   background: "#303030",
   primary: "#07c",
   secondary: "#05a",
-  muted: "#bbb" || "#e5e5e5",
+  muted: "#e5e5e5",
 }
 
 const typography = {
@@ -23,12 +23,22 @@ const typography = {
   },
 }
 
+const borders = {
+  line: "1px #bbb solid",
+}
+
 const breakpoints = [
   //
   "40em",
   "52em",
   "64em",
 ]
+
+const shadows = {
+  sm: "0 0 4px rgba(0, 0, 0, .25)",
+  md: "0 0 8px rgba(0, 0, 0, .25)",
+  lg: "0 0 24px rgba(0, 0, 0, .25)",
+}
 
 const BASE_SIZE = 8
 
@@ -48,12 +58,6 @@ const space = [
   BASE_SIZE * 32, // 256 (12)
 ]
 
-const shadows = {
-  sm: "0 0 4px rgba(0, 0, 0, .25)",
-  md: "0 0 8px rgba(0, 0, 0, .25)",
-  lg: "0 0 24px rgba(0, 0, 0, .25)",
-}
-
 const styles = {
   root: {
     boxSizing: "border",
@@ -64,6 +68,7 @@ const styles = {
 
 export default {
   ...typography,
+  borders,
   breakpoints,
   colors,
   shadows,

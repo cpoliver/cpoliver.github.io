@@ -1,6 +1,21 @@
 import React from "react"
 import { Box, Flex, Text } from "rebass"
 
+const Stat = ({ label, value }) => (
+  <Box mb={3}>
+    <Text
+      sx={{
+        fontSize: 11,
+        fontWeight: "bold",
+        textTransform: "uppercase",
+      }}
+    >
+      {label}
+    </Text>
+    <Text>{value}</Text>
+  </Box>
+)
+
 export const Employment = ({
   jobTitle,
   employer,
@@ -13,10 +28,18 @@ export const Employment = ({
   technology,
 }) => (
   <Flex flexDirection="column">
-    <Flex py={4}>
+    <Flex
+      py={4}
+      sx={{
+        border: "line",
+        borderWidth: "1px 0",
+        fontSize: 18,
+        lineHeight: "140%",
+      }}
+    >
       <Flex
         sx={{
-          flex: 1,
+          flex: 2,
           flexDirection: "column",
           fontWeight: "bold",
           opacity: 0.5,
@@ -26,35 +49,30 @@ export const Employment = ({
         <Text>{from}</Text>
         <Text>&ndash; {to}</Text>
       </Flex>
-      <Flex flexDirection="column" flex={2} px={4}>
+      <Flex flexDirection="column" flex={3} px={7}>
         <Text fontWeight="bold">{jobTitle}</Text>
         <Text>{employer.name}</Text>
       </Flex>
-      <Box flex={1} />
+      <Box flex={2} />
     </Flex>
-    <Flex>
-      <Flex flex={1} flexDirection="column" sx={{ textAlign: "right" }}>
-        <Box>
-          <Text>Team Size</Text>
-          <Text>{teamSize}</Text>
-        </Box>
-        <Box>
-          <Text>Location</Text>
-          <Text>{location}</Text>
-        </Box>
-        <Box>
-          <Text>Project Type</Text>
-          <Text>{projectType}</Text>
-        </Box>
+    <Flex py={4}>
+      <Flex flex={2} flexDirection="column" sx={{ textAlign: "right" }}>
+        <Stat label="Team Size" value={teamSize} />
+        <Stat label="Location" value={location} />
+        <Stat label="Project Type" value={projectType.join(", ")} />
       </Flex>
-      <Flex flex={2} flexDirection="column" px={4}>
+      <Flex flex={3} flexDirection="column" px={7}>
         {bullets.map((b, i) => (
-          <Box key={i}>{b}</Box>
+          <Text key={i} mb={2}>
+            {b}
+          </Text>
         ))}
       </Flex>
-      <Flex flex={1} flexDirection="column">
+      <Flex flex={2} flexDirection="column">
         {technology.map((t, i) => (
-          <Box key={i}>{t}</Box>
+          <Text key={i} fontWeight="bold" fontSize={11}>
+            {t}
+          </Text>
         ))}
       </Flex>
     </Flex>
