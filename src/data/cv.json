@@ -1,0 +1,48 @@
+{
+  "name": {
+    "first": "Charles",
+    "initial": "P.",
+    "last": "Oliver"
+  },
+  "jobTitle": "Front-End Architect & Full-Stack Developer",
+  "contact": {
+    "email": {
+      "name": "charles",
+      "domain": "cpoliver.com"
+    },
+    "phone": {
+      "prefix": "+44",
+      "number": ["7957", "127", "XXX"]
+    }
+  },
+  "statement": [
+    "I am a passionate Full-Stack JavaScript specialist who thrives off problem-solving using a variety of technologies.",
+    "My main skills involve using React, React Native, Node and GraphQL to create rich, responsive user experiences.",
+    "I also have a wealth of experience with C# and Microsoft .net. Prior experience of leadership, technical support, and design also contribute to my offerings as a multi-disciplined professional."
+  ],
+  "experience": [
+    [{ "years": 10, "skils": ["C# .net", "Agile Delivery"] }],
+    [{ "years": 5, "skils": ["React", "NodeJS"] }],
+    [{ "years": 3, "skils": ["React Native", "Remote Working"] }]
+  ],
+  "employment": [
+    {
+      "employer": {
+        "name": "cloudThing",
+        "location": "Worcestershire, Remote"
+      },
+      "from": "2019-09",
+      "to": "2020-05",
+      "bullets": [
+        "Architecting a new front-end for a large education platform client using React, Apollo, and TypeScript",
+        "Gathering requirements, producing roadmaps, and writing user stories with clients on-site",
+        "Upskilling graduate developers, and developers with non-React backgrounds",
+        "Organising 25+ developers based in the Bangalore office working on several concurrent projects"
+      ],
+      "teamSize": "> 25",
+      "projectType": ["greenfield", "migration"],
+      "technology": ["graphql", "react"]
+    }
+  ],
+  "education": [{}]
+}
