@@ -3,7 +3,7 @@ export const colors = {
   background: "#303030",
   primary: "#07c",
   secondary: "#05a",
-  muted: "#8d8d8d",
+  muted: "#bbb" || "#e5e5e5",
 }
 
 const typography = {

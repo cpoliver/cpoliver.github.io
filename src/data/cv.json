@@ -27,12 +27,13 @@
   ],
   "employment": [
     {
+      "jobTitle": "Front-End Architect",
       "employer": {
         "name": "cloudThing",
         "location": "Worcestershire, Remote"
       },
-      "from": "2019-09",
-      "to": "2020-05",
+      "from": "September '19",
+      "to": "July '20",
       "bullets": [
         "Architecting a new front-end for a large education platform client using React, Apollo, and TypeScript",
         "Gathering requirements, producing roadmaps, and writing user stories with clients on-site",
